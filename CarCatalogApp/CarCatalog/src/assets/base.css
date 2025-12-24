@@ -1,0 +1,137 @@
+:root {
+  /* Основные цвета бренда */
+  --tts-primary: #1a56db;
+  --tts-primary-dark: #1e40af;
+  --tts-primary-light: #60a5fa;
+  
+  /* Нейтральные цвета */
+  --tts-white: #ffffff;
+  --tts-gray-50: #f8fafc;
+  --tts-gray-100: #f1f5f9;
+  --tts-gray-200: #e2e8f0;
+  --tts-gray-300: #cbd5e1;
+  --tts-gray-400: #94a3b8;
+  --tts-gray-500: #64748b;
+  --tts-gray-600: #475569;
+  --tts-gray-700: #334155;
+  --tts-gray-800: #1e293b;
+  --tts-gray-900: #0f172a;
+  --tts-black: #000000;
+  
+  /* Системные цвета */
+  --tts-success: #10b981;
+  --tts-warning: #f59e0b;
+  --tts-error: #ef4444;
+  --tts-info: #3b82f6;
+  
+  /* Эффекты */
+  --tts-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --tts-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --tts-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --tts-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tts-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Скругления */
+  --tts-radius-sm: 0.25rem;
+  --tts-radius: 0.5rem;
+  --tts-radius-md: 0.75rem;
+  --tts-radius-lg: 1rem;
+  --tts-radius-full: 9999px;
+  
+  /* Типографика */
+  --tts-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --tts-font-mono: 'SF Mono', Monaco, 'Cascadia Mono', 'Segoe UI Mono', monospace;
+  
+  /* Размеры */
+  --tts-navbar-height: 64px;
+  --tts-sidebar-width: 280px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--tts-font-sans);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--tts-gray-800);
+  background-color: var(--tts-gray-50);
+  min-height: 100vh;
+}
+
+/* Типографика */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--tts-gray-900);
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Пользовательский скролл */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tts-gray-100);
+  border-radius: var(--tts-radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tts-gray-300);
+  border-radius: var(--tts-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tts-gray-400);
+}
+
+/* Фокус-стили */
+:focus-visible {
+  outline: 2px solid var(--tts-primary);
+  outline-offset: 2px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
